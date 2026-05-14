@@ -1,0 +1,271 @@
+.message.hide
+  | 规则を変更しました。
+
+form.rule
+  dl
+    dt プリセット
+    dd
+      select(name="プリセット")
+        option 电脑麻将规则
+      input(type="button" name="プリセット" value="読込み")
+  dl
+    dt 配給原点
+    dd
+      input(name="配給原点" type="text" maxlength="5")
+    dt 順位点
+    dd
+      label.wrap
+        | 1着:
+        input(name="順位点" type="text" disabled)
+      label.wrap
+        | 2着:
+        input(name="順位点" type="text")
+      label.wrap
+        | 3着:
+        input(name="順位点" type="text")
+      label.wrap
+        | 4着:
+        input(name="順位点" type="text")
+      br
+      label
+        input(name="順位点四捨五入有" type="checkbox" value="1")
+        | 把积分四舍五入
+    dt 連風牌
+    dd
+      label
+        input(name="連風牌は2符" type="radio" value="1")
+        | 2符
+      label
+        input(name="連風牌は2符" type="radio" value="0")
+        | 4符
+  dl
+    dt 赤牌
+    dd
+      label
+        img(src="img/m0.gif" alt="赤ウーワン")
+        input(name="赤牌" type="text" maxlength="1")
+      label
+        img(src="img/p0.gif" alt="赤ウーピン")
+        input(name="赤牌" type="text" maxlength="1")
+      label
+        img(src="img/s0.gif" alt="赤ウーソー")
+        input(name="赤牌" type="text" maxlength="1")
+    dt クイタン
+    dd
+      label
+        input(name="クイタン有" type="radio" value="0")
+        | 无
+      label
+        input(name="クイタン有" type="radio" value="1")
+        | 有
+    dt 喰い替え
+    dd
+      label
+        input(name="喰い替え許可レベル" type="radio" value="0")
+        | 不换
+      label
+        input(name="喰い替え許可レベル" type="radio" value="1")
+        | 有换
+      label
+        input(name="喰い替え許可レベル" type="radio" value="2")
+        | 也有实物替换
+  dl
+    dt 場数
+    dd
+      label
+        input(name="場数" type="radio" value="0")
+        | 一局戦
+      label
+        input(name="場数" type="radio" value="1")
+        | 東風戦
+      label
+        input(name="場数" type="radio" value="2")
+        | 東南戦
+      label
+        input(name="場数" type="radio" value="4")
+        | 一荘戦
+    dt 途中流局
+    dd
+      label
+        input(name="途中流局有" type="radio" value="0")
+        | 无
+      label
+        input(name="途中流局有" type="radio" value="1")
+        | 有(九種九牌、四風連打、四家立直、四開槓)
+    dt 流し満貫
+    dd
+      label
+        input(name="流し満貫有" type="radio" value="0")
+        | 无
+      label
+        input(name="流し満貫有" type="radio" value="1")
+        | 有
+    dt ノーテン宣言
+    dd
+      label
+        input(name="ノーテン宣言有" type="radio" value="0")
+        | 无
+      label
+        input(name="ノーテン宣言有" type="radio" value="1")
+        | 有
+    dt ノーテン罰
+    dd
+      label
+        input(name="ノーテン罰有" type="radio" value="0")
+        | 无
+      label
+        input(name="ノーテン罰有" type="radio" value="1")
+        | 有
+    dt 同時和了
+    dd
+      label
+        input(name="最大同時和了数" type="radio" value="1")
+        | 頭ハネ
+      label
+        input(name="最大同時和了数" type="radio" value="2")
+        | ダブロン有(三家和は流局)
+      label
+        input(name="最大同時和了数" type="radio" value="3")
+        | トリロン有
+    dt 連荘方式
+    dd
+      label
+        input(name="連荘方式" type="radio" value="0")
+        | 連荘无
+      label
+        input(name="連荘方式" type="radio" value="1")
+        | 和了連荘
+      label
+        input(name="連荘方式" type="radio" value="2")
+        | テンパイ連荘
+      label
+        input(name="連荘方式" type="radio" value="3")
+        | ノーテン連荘
+    dt トビ終了
+    dd
+      label
+        input(name="トビ終了有" type="radio" value="0")
+        | 无
+      label
+        input(name="トビ終了有" type="radio" value="1")
+        | 有
+    dt オーラス止め
+    dd
+      label
+        input(name="オーラス止め有" type="radio" value="0")
+        | 无
+      label
+        input(name="オーラス止め有" type="radio" value="1")
+        | 有
+    dt 延長戦方式
+    dd
+      label
+        input(name="延長戦方式" type="radio" value="0")
+        | 延長戦无
+      label
+        input(name="延長戦方式" type="radio" value="1")
+        | サドンデス
+      label
+        input(name="延長戦方式" type="radio" value="2")
+        | 連荘優先サドンデス
+      label
+        input(name="延長戦方式" type="radio" value="3")
+        | 4局固定
+  dl
+    dt 一発
+    dd
+      label
+        input(name="一発有" type="radio" value="0")
+        | 无
+      label
+        input(name="一発有" type="radio" value="1")
+        | 有
+    dt 裏龙
+    dd
+      label
+        input(name="裏龙有" type="radio" value="0")
+        | 无
+      label
+        input(name="裏龙有" type="radio" value="1")
+        | 有
+    dt カン龙
+    dd
+      label
+        input(name="カン龙有" type="radio" value="0")
+        | 无
+      label
+        input(name="カン龙有" type="radio" value="1")
+        | 有
+      label
+        input(name="カン龙後乗せ" type="checkbox" value="1")
+        | 後乗せ
+    dt カン裏
+    dd
+      label
+        input(name="カン裏有" type="radio" value="0")
+        | 无
+      label
+        input(name="カン裏有" type="radio" value="1")
+        | 有
+    dt 自摸番无リーチ
+    dd
+      label
+        input(name="自摸番无リーチ有" type="radio" value="0")
+        | 无
+      label
+        input(name="自摸番无リーチ有" type="radio" value="1")
+        | 有
+    dt リーチ後の暗槓
+    dd
+      label
+        input(name="リーチ後暗槓許可レベル" type="radio" value="0")
+        | すべての暗槓不可
+      label
+        input(name="リーチ後暗槓許可レベル" type="radio" value="1")
+        | 牌姿の変わる暗槓不可
+      label
+        input(name="リーチ後暗槓許可レベル" type="radio" value="2")
+        | 待ちの変わる暗槓不可
+  dl
+    dt 役満の複合
+    dd
+      label
+        input(name="役満の複合有" type="radio" value="0")
+        | 无
+      label
+        input(name="役満の複合有" type="radio" value="1")
+        | 有
+    dt ダブル役満
+    dd
+      label
+        input(name="ダブル役満有" type="radio" value="0")
+        | 无
+      label
+        input(name="ダブル役満有" type="radio" value="1")
+        | 有(国士無双十三面、四暗刻単騎、大四喜、純正九蓮宝燈)
+    dt 数え役満
+    dd
+      label
+        input(name="数え役満有" type="radio" value="0")
+        | 无
+      label
+        input(name="数え役満有" type="radio" value="1")
+        | 有
+    dt 役満パオ
+    dd
+      label
+        input(name="役満パオ有" type="radio" value="0")
+        | 无
+      label
+        input(name="役満パオ有" type="radio" value="1")
+        | 有(大三元、大四喜)
+    dt 切り上げ満貫
+    dd
+      label
+        input(name="切り上げ満貫有" type="radio" value="0")
+        | 无
+      label
+        input(name="切り上げ満貫有" type="radio" value="1")
+        | 有
+
+  input(type="submit" value="変更")

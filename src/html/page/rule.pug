@@ -1,0 +1,21 @@
+- var page = 'rule'
+
+doctype html
+html(lang="ja")
+
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    include ../inc/ogp
+    +ogp('电脑麻将: 规则設定', 'カスタマイズした规则を対局に使用できます')
+
+    include ../inc/style
+    include ../inc/script
+
+  body.rule
+    include ../inc/loaderr
+    include ../inc/navi
+    .version ver. #{version}
+
+    include ../inc/rule
