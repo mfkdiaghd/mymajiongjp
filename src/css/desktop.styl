@@ -1,20 +1,7 @@
 #board
-    width: 800px
-    height: 680px
-    position: fixed
-    top: 50%
-    left: 50%
-    // 【关键修改】这里直接写数字。如果你觉得还不够大，可以把 1.5 改成 1.6 或 1.8
-    transform: translate(-50%, -50%) scale(1.5)
-    transform-origin: center
-    background-color: #1b3d2f !important
-    margin: 0 !important
-    z-index: 1000
-    border: none !important
-
+    height: 880px
 #board > .board
-    height: 680px
-    background-color: #1b3d2f !important
+    height: 880px
     .score
         width:  280px
         height: 160px
@@ -260,6 +247,3 @@ body.analyzer
     padding: 0 !important
     overflow: hidden !important
 
-// 彻底隐藏顶部那一排烦人的文字菜单
-:global(.navi)
-    display: none !important
