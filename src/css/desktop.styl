@@ -1,12 +1,11 @@
 #board
-    width: 800px             // 必须保持 800，这是游戏的逻辑宽度
-    height: 680px            // 必须保持 680，这是游戏的逻辑高度
+    width: 800px
+    height: 680px
     position: fixed
     top: 50%
     left: 50%
-    // 下面这行是核心：使用缩放。
-    // 1.6 倍约等于 1280 宽度。如果你觉得还不够大，可以改成 1.8 或 2.0
-    transform: translate(-50%, -50%) scale(1.6) 
+    // 强制放大 2.0 倍，这在大多数屏幕上效果很好
+    transform: translate(-50%, -50%) scale(2.0)
     transform-origin: center
     background-color: #1b3d2f !important
     margin: 0 !important
@@ -14,8 +13,7 @@
     border: none !important
 
 #board > .board
-    width: 800px             // 这里也要改回 800
-    height: 680px            // 这里也要改回 680
+    height: 680px
     background-color: #1b3d2f !important
     .score
         width:  280px
@@ -255,7 +253,8 @@ body.analyzer
                 display: inline-block
             .speed span
                 opacity: 0.2
-// 彻底解决黑边问题，把网页背景也变绿
+
+// 以下部分是确保铺满全屏和隐藏菜单的关键
 :global(body)
     background-color: #1b3d2f !important
     margin: 0 !important
