@@ -1,20 +1,7 @@
 #board
-    width: 800px
-    height: 680px
-    position: fixed
-    top: 50%
-    left: 50%
-    // 强制放大 2.0 倍，这在大多数屏幕上效果很好
-    transform: translate(-50%, -50%) scale(2.0)
-    transform-origin: center
-    background-color: #1b3d2f !important
-    margin: 0 !important
-    z-index: 1000
-    border: none !important
-
+    height: 780px
 #board > .board
-    height: 680px
-    background-color: #1b3d2f !important
+    height: 780px
     .score
         width:  280px
         height: 160px
@@ -253,11 +240,3 @@ body.analyzer
                 display: inline-block
             .speed span
                 opacity: 0.2
-
-// 以下部分是确保铺满全屏和隐藏菜单的关键
-:global(body)
-    background-color: #1b3d2f !important
-    margin: 0 !important
-    padding: 0 !important
-    overflow: hidden !important
-
