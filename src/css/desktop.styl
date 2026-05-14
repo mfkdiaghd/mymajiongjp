@@ -1,9 +1,22 @@
 #board
-    width:1280px
-    height: 880px
+    width: 800px             // 必须保持 800，这是游戏的逻辑宽度
+    height: 680px            // 必须保持 680，这是游戏的逻辑高度
+    position: fixed
+    top: 50%
+    left: 50%
+    // 下面这行是核心：使用缩放。
+    // 1.6 倍约等于 1280 宽度。如果你觉得还不够大，可以改成 1.8 或 2.0
+    transform: translate(-50%, -50%) scale(1.6) 
+    transform-origin: center
+    background-color: #1b3d2f !important
+    margin: 0 !important
+    z-index: 1000
+    border: none !important
+
 #board > .board
-    width:1280px
-    height: 880px
+    width: 800px             // 这里也要改回 800
+    height: 680px            // 这里也要改回 680
+    background-color: #1b3d2f !important
     .score
         width:  280px
         height: 160px
