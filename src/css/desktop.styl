@@ -1,13 +1,13 @@
 #board
-    width: 800px             // 锁定逻辑宽度
-    height: 680px            // 锁定逻辑高度
-    position: fixed          // 固定定位
-    top: 50%                 // 垂直居中开始
-    left: 50%                // 水平居中开始
-    // 核心缩放代码：自动计算比例并放大，直到顶住屏幕宽或高的边缘
-    transform: translate(-50%, -50%) scale(calc(min(100vw / 800, 100vh / 680)))
-    transform-origin: center // 以中心缩放
-    background-color: #1b3d2f !important // 强制绿色背景
+    width: 800px
+    height: 680px
+    position: fixed
+    top: 50%
+    left: 50%
+    // 核心修正：使用 unquote 告诉编译器不要提前计算，让浏览器去算百分比
+    transform: unquote("translate(-50%, -50%) scale(min(calc(100vw / 800), calc(100vh / 680)))")
+    transform-origin: center
+    background-color: #1b3d2f !important
     margin: 0 !important
     z-index: 1000
 
