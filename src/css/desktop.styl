@@ -4,12 +4,13 @@
     position: fixed
     top: 50%
     left: 50%
-    // 核心修正：使用 unquote 告诉编译器不要提前计算，让浏览器去算百分比
-    transform: unquote("translate(-50%, -50%) scale(min(calc(100vw / 800), calc(100vh / 680)))")
+    // 【关键修改】这里直接写数字。如果你觉得还不够大，可以把 1.5 改成 1.6 或 1.8
+    transform: translate(-50%, -50%) scale(1.5)
     transform-origin: center
     background-color: #1b3d2f !important
     margin: 0 !important
     z-index: 1000
+    border: none !important
 
 #board > .board
     height: 680px
@@ -252,3 +253,13 @@ body.analyzer
                 display: inline-block
             .speed span
                 opacity: 0.2
+// 彻底解决黑边问题，把网页背景也变绿
+:global(body)
+    background-color: #1b3d2f !important
+    margin: 0 !important
+    padding: 0 !important
+    overflow: hidden !important
+
+// 彻底隐藏顶部那一排烦人的文字菜单
+:global(.navi)
+    display: none !important
